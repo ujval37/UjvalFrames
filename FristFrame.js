@@ -7,7 +7,7 @@ const app = express();
 // Define a route to handle incoming requests
 app.get("/", (req, res) => {
   // Construct the HTML response with meta tags
-  const html = `
+ res.send('
         <!DOCTYPE html>
         <HTML>
         <head>
@@ -32,10 +32,8 @@ app.get("/", (req, res) => {
             <p>This is a simple Node.js app serving HTML meta tags.</p>
         </body>
         </html>
+   ');
     `;
-
-  // Send the HTML response
-  res.send(html);
 });
 
 // Start the server
